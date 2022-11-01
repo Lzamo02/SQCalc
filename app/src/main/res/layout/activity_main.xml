@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Views on the Left Side -->
+
+    <TextView
+        android:id="@+id/tvLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="52dp"
+        android:text="Length"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Width"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvLength" />
+
+    <TextView
+        android:id="@+id/tvMtrlAmnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Material Percentage"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvWidth" />
+
+    <TextView
+        android:id="@+id/tvMtrlPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="10%"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvMtrlAmnt" />
+
+    <TextView
+        android:id="@+id/tvMtrlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Room Square Footage"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvMtrlPercent" />
+
+    <TextView
+        android:id="@+id/tvTotalMtrlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Material Order Amount"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvMtrlLabel" />
+
+    <!-- Views on the Right Side -->
+
+    <EditText
+        android:id="@+id/etLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLength"
+        app:layout_constraintStart_toEndOf="@+id/tvLength"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <EditText
+        android:id="@+id/etWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvWidth"
+        app:layout_constraintStart_toEndOf="@+id/tvWidth"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <SeekBar
+        android:id="@+id/seekBartMtrl"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@id/tvMtrlPercent"
+        app:layout_constraintStart_toEndOf="@+id/tvMtrlPercent"
+        app:layout_constraintTop_toTopOf="@id/tvMtrlPercent" />
+
+    <TextView
+        android:id="@+id/tvSqFootage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tvMtrlLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvMtrlLabel"
+        tools:text="3.78" />
+
+    <TextView
+        android:id="@+id/tvTotalMtrlAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalMtrlLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTotalMtrlLabel"
+        tools:text="12.44" />
+</androidx.constraintlayout.widget.ConstraintLayout>
